@@ -18,3 +18,10 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
+
+// this creates rectangles
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.rect(20, 20, 100, 100);
+ctx.stroke();
