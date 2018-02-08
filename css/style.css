@@ -18,19 +18,17 @@ p {
 }
 
 .container {
-  text-align: center;
+  margin-top: -160px;
 }
 
 ul {
     margin: 0;
     padding: 0 45%;
-    text-align: center;
     list-style:upper-roman;
 }
 ol {
     margin: 0;
     padding: 0 45%;
-    text-align: center;
 }
 
 body {font-family: Arial, Helvetica, sans-serif;}
