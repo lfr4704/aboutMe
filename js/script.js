@@ -21,12 +21,7 @@ span.onclick = function() {
 
 // this creates rectangles
 
-var x;
-var y;
-
-
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.fillStyle = 'gray';
-ctx.fillRect(20, 20, 100, 100);
+ctx.rect(20, 20, 100, 100);
 ctx.stroke();

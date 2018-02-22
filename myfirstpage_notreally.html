@@ -1,31 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-  <head>
-      <meta charset="utf-8">
+<head>
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
 
-     <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>My First Page Not Really</title>
+  <meta name="LR Design" content="About  me page">
+ 
 
-     <title>My First Page (not really)</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
-     <!--[if lt IE 9]-->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
+</head>
 
-  <body>
+ <body>
 
-      <h1>Hello world, this is my website</h1>
+
+<div class="" id="header">
+
+  <div class="" id="logo"></div>
+
+  <div class="" id="navigation">
+    <ul>
+      <li><a href="#">home<a/></li>
+      <li><a href="#">about<a/></li>
+      <li><a href="#">contac<a/></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="" id="article">
+
+     <h1>Hello world, this is my website</h1>
       <h3>About Me</h3>
           <p>I'm a <a href="https://www.linkedin.com/in/luis-robles-pe/">Luis Robles,</a> a mechanical engineer transitioning my career into a web developer.</p>
 
-			<img id="myImg" src="./images/tm18.jpg" alt="Nice to meet you!">
+      <img id="myImg" src="./images/tm18.jpg" alt="Nice to meet you!">
 
           <!-- The Modal -->
           <div id="myModal" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="img01" alt="not important">
+            <img class="modal-content" id="img01">
             <div id="caption"></div>
           </div>
 
@@ -33,12 +51,12 @@
           <span class="close">&times;</span>
 
           <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01" alt="not important">
+          <img class="modal-content" id="img01">
 
           <!-- Modal Caption (Image Text) -->
           <div id="caption"></div>
 
-        <div id="container">
+        <div class="container">
           <h3> These are my goals for this class:</h3>
           <ul>
             <li>Learn more code </li>
@@ -56,11 +74,29 @@
         <div class="">
           <h2>I like to work with Algorithms. Let's see some examples!</h2>
           <p>The following sorting algorithm, name, will sort the following bars from smallest to largest</p>
-          <button type="button" name="button">Try me</button>
+
           <canvas id="myCanvas" width="300" height="150" style="border:5px solid #d3d3d3;">
           Your browser does not support the HTML5 canvas tag.</canvas>
 
         </div>
+
+        <div class="photos">
+
+          <h2>I like to stay active and be outside all the time. Here is a collage of the favorite landscapes</h2>
+          <div class="a" style="background-image:url(images/land.png);"></div>
+          <div class="b" style="background-image:url(images/palm.png);"></div>
+          <div class="c" style="background-image:url(images/flower.png);"></div>
+          <div class="d" style="background-image:url(images/tree.png);"></div>
+
+        </div>
+
+</div>
+
+
+
+<div class="" id="footer">
+<p>LR Design &copy;2018</p>
+</div>
 
 <!-- My personal js script -->
 <script src='js/script.js'></script>
