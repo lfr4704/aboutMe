@@ -53,12 +53,13 @@ p {
 .container > ol {
     margin: 0;
     padding: 0 50%;
-    list-style:upper-roman;
+    
 }
 
 .ulist > ul {
     margin: 0;
     padding: 0 42%;
+    list-style:upper-roman;
 }
 
 body {
@@ -158,22 +159,24 @@ body {
 
 #navigation{
   padding: 3px;
+  text-align: center;
 }
 
 #navigation ul li {
   display: inline;
+  margin:40px;
 }
 
 #navigation a {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 600; /* no px is necessary or it will not work correctly*/
   text-decoration: none; /* this removes the bullet points from list*/
-  color: pink;
+  color: purple;
   font-family:'BioRhyme Expanded', serif;
 }
 
 #navigation a:hover{
-  color: hotpink;
+  color: blue;
 }
 
 #article{
@@ -220,4 +223,14 @@ body {
 .photos > div.d {
   grid-column: 2;
   grid-row: 2;
+}
+
+/* this is for scrolling effect*/
+
+.main {
+    height: 100%;
+}
+
+section {
+    min-height: 100%;
 }
