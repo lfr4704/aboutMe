@@ -1,16 +1,11 @@
 
 /* this is for myfistpage_notreally html file*/
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-
 /*google fonts link*/
 @import url('https://fonts.googleapis.com/css?family=Kavivanar|Mukta+Mahee');
 
+/*
+//the code below changes color of body responsively acording to size of screen
 @media screen and (max-width:400px){
 
   body{
@@ -26,6 +21,7 @@
   }
 
 }
+*/
 
 img{
     padding-top: 20px;
@@ -54,20 +50,27 @@ p {
   margin-top: -160px;
 }
 
-.container > ul {
-    margin: 0;
-    padding: 0 42%;
-    list-style:upper-roman;
-}
-
 .container > ol {
     margin: 0;
     padding: 0 50%;
+    list-style:upper-roman;
+}
+
+.ulist > ul {
+    margin: 0;
+    padding: 0 42%;
 }
 
 body {
     font-family: 'Mukta Mahee', sans-serif;
     font-family: 'Kavivanar', cursive;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
 
 /* Style the Image Used to Trigger the Modal */
@@ -146,25 +149,11 @@ body {
 
 #header{
   width: 100%;
-  height: 100px;
+  height: 100%;
   border-style: solid;
   border-width: 10px;
   border-color: red;
   margin:0 auto;
-
-}
-
-#article{
-  width: 100%;
-  height: 2500px;
-  border: dotted 10px blue;
-  background-color: pink;
-}
-
-#footer {
-  width: 100%;
-  height: 200px;
-  border: double 10px green;
 }
 
 #navigation{
@@ -173,8 +162,8 @@ body {
 
 #navigation ul li {
   display: inline;
-  margin: 60px;
 }
+
 #navigation a {
   font-size: 3em;
   font-weight: 600; /* no px is necessary or it will not work correctly*/
@@ -187,11 +176,23 @@ body {
   color: hotpink;
 }
 
+#article{
+  width: 100%;
+  border: dotted 10px blue;
+  background-color: pink;
+}
+
+#footer {
+  width: 100%;
+  height: 200px;
+  border: double 10px green;
+}
+
 .photos {
   margin; 20px 0px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 150px 150px;
+  grid-template-rows: 300px 300px;
   grid-gap: 5px;
 }
 
