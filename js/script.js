@@ -19,6 +19,12 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+//button
+
+function pirntAlgorithm() {
+  console.log("hello");
+}
+
 // this creates rectangles
 
 var c = document.getElementById("myCanvas");
