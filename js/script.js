@@ -25,9 +25,9 @@ span.onclick = function() {
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var rectangleWidth = 100;
-var number;
+var rectangleHeight; //rectangle height to be generated randomly 
 var newArray = [];
-var arrayNum;
+var arrayLength;
 var swapped = false;
 var tempArray =[];
 //button
@@ -36,26 +36,26 @@ function generateRectangles() {
   
   for (var i = 20; i < 900; i = i + 100) {
 
-  number = Math.random() * 100;
-  number = Math.floor(number);
+  rectangleHeight = Math.random() * 100;
+  rectangleHeight = Math.floor(rectangleHeight);
   
-  ctx.rect(i, 20, rectangleWidth, number);
+  ctx.rect(i, 20, rectangleWidth, rectangleHeight);
   ctx.stroke();
   ctx.fillStyle = 'rgba(255,0,0,0.5)'; 
   ctx.fill();
-  newArray.push(number);
-  arrayNum = newArray.length;
+  newArray.push(rectangleHeight);
+  arrayLength = newArray.length;
 
 }
 console.log("this is the original random array " + "[" + newArray + "]");
-return arrayNum;
+return arrayLength;
 };
 
-
+// this sorts the rectangle heights stored in the array.
 
 function sortRectangles() {
   
-  for (var n = 0; n < arrayNum; n++) {
+  for (var n = 0; n < arrayLength; n++) {
 
     if (newArray[n] > newArray[n+1]){
       [newArray[n], newArray[n+1]] = [newArray[n+1], newArray[n]];
@@ -64,7 +64,7 @@ function sortRectangles() {
       tempArray = newArray;  
       console.log("n " + n + "[" + tempArray + "]");
 
-       for (var  x= 0; x < arrayNum - 1; x++) {
+       for (var  x= 0; x < arrayLength - 1; x++) {
 
       if(tempArray[x] > tempArray[x+1]){
       [tempArray[x], tempArray[x+1]] = [tempArray[x+1], tempArray[x]];
