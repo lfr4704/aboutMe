@@ -26,7 +26,9 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var rectangleWidth = 100;
 var number;
-
+var newArray = [];
+var arrayNum;
+var swapped = false;
 //button
 
 function generateRectangles() {
@@ -40,15 +42,24 @@ function generateRectangles() {
   ctx.stroke();
   ctx.fillStyle = 'rgba(255,0,0,0.5)'; 
   ctx.fill();
+  newArray.push(number);
+  arrayNum = newArray.length;
 }
-
+return arrayNum;
 };
 
 
-/*function sortRectangles() {
+
+function sortRectangles() {
   
-  console.log(rectangleWidth * number );
-};*/
+  for (var n = 0; n < arrayNum; n++) {
+    if (newArray[n] > newArray[n+1]){
+      [newArray[n], newArray[n+1]] = [newArray[n+1], newArray[n]];
+      }
+    } 
+    console.log(newArray);
+  };
+  
 
 // this is to add scrolling effect to anchors
 
