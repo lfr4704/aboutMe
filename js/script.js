@@ -56,17 +56,23 @@ return arrayNum;
 function sortRectangles() {
   
   for (var n = 0; n < arrayNum; n++) {
+
     if (newArray[n] > newArray[n+1]){
       [newArray[n], newArray[n+1]] = [newArray[n+1], newArray[n]];
-      } 
+      } else if (newArray[n] <= newArray[n+1] ) {continue;}
+
       tempArray = newArray;  
-      console.log(n + " iteration" + "[" + tempArray + "]");
-       for (var  x= 0; x < arrayNum; x++) {
+      console.log("n " + n + "[" + tempArray + "]");
+
+       for (var  x= 0; x < arrayNum - 1; x++) {
+
       if(tempArray[x] > tempArray[x+1]){
       [tempArray[x], tempArray[x+1]] = [tempArray[x+1], tempArray[x]];
-      } 
-      console.log(x + " internal iteration" + "[" + tempArray + "]");
+      } else if (tempArray[x] <= tempArray[x+1]) {continue;}
+
+      console.log("x " + x + "[" + tempArray + "]");
     }
+
     }
     return tempArray;
   };

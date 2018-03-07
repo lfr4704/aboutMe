@@ -42,6 +42,10 @@ h3 {
   text-align: center;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 p {
   text-align: center;
 }
