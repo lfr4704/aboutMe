@@ -49,12 +49,12 @@ p {
 .container {
   margin-top: -160px;
 }
-
+/*
 .container > ol {
     margin: 0;
     padding: 0 50%;
     
-}
+}*/
 
 .ulist > ul {
     margin: 0;
@@ -226,10 +226,11 @@ body {
 /* this is for scrolling effect*/
 
 .main {
-    height: 100%;
+    
     margin-top: 40px;
 }
 
-section {
-    min-height: 100%;
+.scroll-to {
+    height: 20px;
 }
+
