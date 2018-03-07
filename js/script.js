@@ -29,6 +29,7 @@ var number;
 var newArray = [];
 var arrayNum;
 var swapped = false;
+var tempArray =[];
 //button
 
 function generateRectangles() {
@@ -44,7 +45,9 @@ function generateRectangles() {
   ctx.fill();
   newArray.push(number);
   arrayNum = newArray.length;
+
 }
+console.log("this is the original random array " + "[" + newArray + "]");
 return arrayNum;
 };
 
@@ -55,11 +58,18 @@ function sortRectangles() {
   for (var n = 0; n < arrayNum; n++) {
     if (newArray[n] > newArray[n+1]){
       [newArray[n], newArray[n+1]] = [newArray[n+1], newArray[n]];
-      }
-    } 
-    console.log(newArray);
+      } 
+      tempArray = newArray;  
+      console.log(n + " iteration" + "[" + tempArray + "]");
+       for (var  x= 0; x < arrayNum; x++) {
+      if(tempArray[x] > tempArray[x+1]){
+      [tempArray[x], tempArray[x+1]] = [tempArray[x+1], tempArray[x]];
+      } 
+      console.log(x + " internal iteration" + "[" + tempArray + "]");
+    }
+    }
+    return tempArray;
   };
-  
 
 // this is to add scrolling effect to anchors
 
