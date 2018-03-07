@@ -19,18 +19,36 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-//button
-
-function pirntAlgorithm() {
-  console.log("hello");
-}
 
 // this creates rectangles
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-ctx.rect(20, 20, 100, 100);
-ctx.stroke();
+var rectangleWidth = 100;
+var number;
+
+//button
+
+function generateRectangles() {
+  
+  for (var i = 20; i < 900; i = i + 100) {
+
+  number = Math.random() * 100;
+  number = Math.floor(number);
+  
+  ctx.rect(i, 20, rectangleWidth, number);
+  ctx.stroke();
+  ctx.fillStyle = 'rgba(255,0,0,0.5)'; 
+  ctx.fill();
+}
+
+};
+
+
+/*function sortRectangles() {
+  
+  console.log(rectangleWidth * number );
+};*/
 
 // this is to add scrolling effect to anchors
 
@@ -57,4 +75,7 @@ $(document).ready(function(){
       });
     } // End if
   });
+
+
+
 });

@@ -49,12 +49,12 @@ p {
 .container {
   margin-top: -160px;
 }
-/*
-.container > ol {
+
+ ol {
     margin: 0;
     padding: 0 50%;
     
-}*/
+}
 
 .ulist > ul {
     margin: 0;
@@ -189,8 +189,9 @@ body {
   border: double 10px green;
 }
 
+/* this is the grid to put photos galleries in div*/
 .photos {
-  margin; 20px 0px;
+  margin: 20px 0px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 300px 300px;
@@ -233,4 +234,3 @@ body {
 .scroll-to {
     height: 20px;
 }
-
