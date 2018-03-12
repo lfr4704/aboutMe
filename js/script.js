@@ -20,36 +20,48 @@ span.onclick = function() {
 }
 
 
-// this creates rectangles
+// variable to be used for functions below
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var rectangleWidth = 100;
+var positionTop = 20;
+var positionLeft=[];
 var rectangleHeight; //rectangle height to be generated randomly 
 var newArray = [];
 var arrayLength;
 var swapped = false;
 var tempArray =[];
-//button
+var otherTempArray = [];
+
+
+//click on button to creates rectangles
 
 function generateRectangles() {
   
-  for (var i = 20; i < 900; i = i + 100) {
+  for (var i = 20; i < 900; i = i + rectangleWidth) {
 
   rectangleHeight = Math.random() * 100;
   rectangleHeight = Math.floor(rectangleHeight);
   
-  ctx.rect(i, 20, rectangleWidth, rectangleHeight);
+  ctx.rect(i, positionTop, rectangleWidth, rectangleHeight);
   ctx.stroke();
   ctx.fillStyle = 'rgba(255,0,0,0.5)'; 
   ctx.fill();
   newArray.push(rectangleHeight);
   arrayLength = newArray.length;
-
+  positionLeft.push(i);
 }
-console.log("this is the original random array " + "[" + newArray + "]");
-return arrayLength;
+
+/*function position(newArray[rectangleHeight]) {
+  ctx.rect(i, 20, rectangleWidth, rectangleHeight);
+}*/
+
+console.log("this is the original random array of rectangle heights " + "[" + newArray + "]");
+console.log("this is the original restangles position for rectangles " + "[" + positionLeft + "]");
+return ;
 };
+
 
 // this sorts the rectangle heights stored in the array.
 
@@ -59,18 +71,29 @@ function sortRectangles() {
 
     if (newArray[n] > newArray[n+1]){
       [newArray[n], newArray[n+1]] = [newArray[n+1], newArray[n]];
-      } else if (newArray[n] <= newArray[n+1] ) {continue;}
+      [positionLeft[n], positionLeft[n+1]] = [positionLeft[n+1], positionLeft[n]];
+      /*
+       ctx.rect(n, 20, rectangleWidth, newArray[n]);
+        ctx.stroke();
+        ctx.fillStyle = 'rgba(255,0,0,0.5)'; 
+        ctx.fill();
+        */
+      } 
 
       tempArray = newArray;  
+      otherTempArray = positionLeft;
       console.log("n " + n + "[" + tempArray + "]");
+      console.log("n " + n + "[" + otherTempArray + "]");
 
        for (var  x= 0; x < arrayLength - 1; x++) {
 
       if(tempArray[x] > tempArray[x+1]){
       [tempArray[x], tempArray[x+1]] = [tempArray[x+1], tempArray[x]];
+      [otherTempArray[x], otherTempArray[x+1]] = [otherTempArray[x+1], otherTempArray[x]];
       } else if (tempArray[x] <= tempArray[x+1]) {continue;}
 
       console.log("x " + x + "[" + tempArray + "]");
+      console.log("x " + x + "[" + otherTempArray + "]");
     }
 
     }

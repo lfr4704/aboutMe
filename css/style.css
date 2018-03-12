@@ -197,7 +197,7 @@ body {
 .photos {
   margin: 20px 0px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px 300px;
   grid-gap: 5px;
 }
